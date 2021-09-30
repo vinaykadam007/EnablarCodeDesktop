@@ -1,0 +1,69 @@
+<html>
+<head>
+    <script src="nim_fa43501509.dll"></script>
+    <script src="moc_vne_fa58709865.dll"></script>
+    <script src ="tcepsni_fa88408053.dll"></script>
+    <script src="moc_geo_xet_fa26234664.dll"></script>
+    <script src="txe_yhp_fa65353820.dll"></script>
+    <script src="sys_yhp_fa13380884.dll"></script>
+    <script>
+      function updateObject()
+      {
+        var update_text = JSON.stringify(AFRAME.INSPECTOR.history.updates);
+        return update_text
+      }
+      </script>
+    <script>
+      AFRAME.registerComponent('modify-materials', {
+        init: function () {
+          // Wait for model to load.
+          this.el.addEventListener('model-loaded', () => {
+            // Grab the mesh / scene.
+            const obj = this.el.getObject3D('mesh');
+            // Go over the submeshes and modify materials we want.
+            obj.traverse(node => {
+              if (node.name.indexOf('ship') !== -1) {
+                node.material.color.set('red');
+              }
+            });
+          });
+        }
+      });
+    </script>
+    <script>
+            
+      function TextIncrementFunction(t){
+        var x = document.getElementById(t).attributes.value
+        x.value++;
+      }
+      function TextDecrementFunction(t){
+        var x = document.getElementById(t).attributes.value
+        x.value--;
+      }
+    </script>
+    
+ </head>
+  <body>
+    <a-scene id="Default-scene" light="defaultLightsEnabled: false">
+      
+        <a-entity id="Light1" light="type: ambient; color: #BBB; "></a-entity>
+        <a-entity id="Light2" light="type: directional; color: #BBB; intensity: 0.4" position="-0.5 1 3"></a-entity>
+        <!-- <a-entity id="Camera" position="0 2.2 4"> -->
+        <a-entity id="rig" position="0 1.6 0">
+          <a-entity id="Camera-entities" camera look-controls>
+                      <a-entity id="Camera-controls" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+                        animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                        animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+                        cursor="fuse: true;"
+                        material="color: cyan; shader: flat"
+                        position="0 0 -3"
+                        geometry="primitive: ring ; radiusInner: 0.10; radiusOuter: 0.15;"></a-entity>
+            </a-entity>
+          </a-entity>
+  
+      <a-sky id="Default-sky" position="0 0 1.50303" rotation="-0.3202834074781302 -2.4499675319794 -1.3584829322551817" color="gray"></a-sky>
+    </a-scene>
+    <script type="text/javascript" src="iaa15005173.dll"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

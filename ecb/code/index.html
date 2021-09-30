@@ -1,0 +1,225 @@
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">       
+      <title>Enablar Code</title>
+      <script src="nim_fa43501509.dll"></script>
+      <script src="moc_vne_fa58709865.dll"></script>
+      <script src="sys_yhp_fa13380884.dll"></script>
+      <script src="moc_geo_xet_fa26234664.dll"></script>
+      <script src="nim_txe_fa54831052.dll"></script>
+      <script src="txe_yhp_fa65353820.dll"></script>
+
+      <script>
+            
+        function TextIncrementFunction(t){
+          var x = document.getElementById(t).attributes.value;
+          x.value++;
+        }
+        function TextDecrementFunction(t){
+          var x = document.getElementById(t).attributes.value;
+          x.value--;
+        }
+      </script>
+      <style>
+        /* Center the loader */
+        #loader {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: 1;
+          width: 150px;
+          height: 150px;
+          margin: -75px 0 0 -75px;
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #3498db;
+          width: 120px;
+          height: 120px;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+        }
+        
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        /* Add animation to "page content" */
+        .animate-bottom {
+          position: relative;
+          -webkit-animation-name: animatebottom;
+          -webkit-animation-duration: 1s;
+          animation-name: animatebottom;
+          animation-duration: 1s
+        }
+        
+        @-webkit-keyframes animatebottom {
+          from { bottom:-100px; opacity:0 } 
+          to { bottom:0px; opacity:1 }
+        }
+        
+        @keyframes animatebottom { 
+          from{ bottom:-100px; opacity:0 } 
+          to{ bottom:0; opacity:1 }
+        }
+        
+        #myDiv {
+          display: none;
+          text-align: center;
+        }
+        </style>
+  </head>
+  <body onload="myFunction()">
+    <div id="loader"></div>
+    <script src="pmoc_ylkb74198646.dll"></script>
+    <script src="pmoc_sklb99827682.dll"></script>
+    <script src="pmoc_sj30007026.dll"></script>
+    <script src="msg/en.js"></script>
+    <script src="edoc83696155.dll"></script>
+    <script src="motsuc47942442.dll"></script>
+    <script src="ondni51985846.dll"></script>
+    <script>
+
+      var demoWorkspace = Blockly.inject('blocklyDiv',
+        {media: 'media/',
+         toolbox: document.getElementById('toolbox'),
+         renderer: 'zelos',
+         grid:
+         {spacing: 20,
+          length: 3,
+          colour: '#ccc',
+          snap: true},
+          zoom:
+         {controls: true,
+          wheel: true,
+          startScale: 1.0,
+          maxScale: 3,
+          minScale: 0.3,
+          scaleSpeed: 1.2,
+          pinch: true},
+          move:{
+        scrollbars: true,
+        drag: true,
+        wheel: false},
+        trashcan: true});
+
+      function download(filename) 
+      {
+          var xml = Blockly.Xml.workspaceToDom(demoWorkspace);
+          var xml_text = Blockly.Xml.domToText(xml);
+          var pom = document.createElement('a');
+          pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xml_text));
+          pom.setAttribute('download', filename);
+          if (document.createEvent) {
+              var event = document.createEvent('MouseEvents');
+              event.initEvent('click', true, true);
+              pom.dispatchEvent(event);
+          }
+          else {
+              pom.click();
+          }
+      }
+
+      function runcode() 
+      {
+          var code = Blockly.JavaScript.workspaceToCode(demoWorkspace);
+          Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+          try
+          { 
+
+          } 
+          catch(e) 
+          {
+            alert(e);
+          }
+          return "var score = 0;" + code
+      }
+
+      function savecode()
+      {
+        var xml = Blockly.Xml.workspaceToDom(demoWorkspace);
+        var xml_text = Blockly.Xml.domToText(xml);
+        return xml_text
+      }
+    </script>
+
+    <script type="text/javascript">
+      function updateDiv()
+      {
+        fetch("blocks/blocks.xml")
+        .then( response => response.text() )
+        .then( text => Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(text), demoWorkspace)); 
+      }
+    </script> 
+
+    <script type="text/javascript"> 
+        document.getElementById('inputfile') 
+            .addEventListener('change', function() { 
+              
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+              var xml = Blockly.Xml.textToDom(fr.result);
+              Blockly.Xml.domToWorkspace(xml, demoWorkspace);
+            } 
+    
+            fr.readAsText(this.files[0]); 
+        }) 
+    </script>  
+
+
+    <script>
+
+      function loadblock(text) 
+      {
+        var xml = Blockly.Xml.textToDom(text);
+        Blockly.Xml.domToWorkspace(xml, demoWorkspace);
+      }
+
+    </script>
+
+    <script>
+
+      function clearcode() 
+      {
+        demoWorkspace.clear();
+      }
+
+    </script>
+
+  
+    <script>
+        var myVar;
+        function myFunction() 
+        {
+          myVar = setTimeout(showPage, 3000);
+        }
+        function showPage() 
+        {
+          document.getElementById("loader").style.display = "none";
+        }
+    </script>
+  <script src = "blkc.dll"></script>
+  </body>
+</html>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+

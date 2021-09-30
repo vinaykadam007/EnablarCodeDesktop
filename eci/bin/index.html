@@ -1,0 +1,425 @@
+
+  <html>
+    <head><meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+      <title>Enablar Code</title>
+      <script src="pmoc_ylklb74198646.dll"></script>
+      <script src="pmoc_sklb99827682.dll"></script>
+      <script src="pmoc_sj30007026.dll"></script>
+      <script src="msg/en.js"></script>
+      <script src="edoc83696155.dll"></script>
+      <script src="motsuc47942442.dll"></script>
+      <script src="nim_fa43501509.dll"></script>
+      <script src="moc_vne_fa58709865.dll"></script>
+      <script src="sys_yhp_fa13380884.dll"></script>
+      <script src="moc_geo_xet_fa26234664.dll"></script>
+      <script src="nim_txe_fa54831052.dll"></script>
+      <script src="txe_yhp_fa65353820.dll"></script>
+
+    
+      <script>
+            
+        function TextIncrementFunction(t){
+          var x = document.getElementById(t).attributes.value
+          x.value++;
+        }
+        function TextDecrementFunction(t){
+          var x = document.getElementById(t).attributes.value
+          x.value--;
+        }
+      </script>
+
+      <style>
+        body {
+          background-color:#ffffff;
+          font-family: sans-serif;
+        }
+        h1 {
+          font-weight: normal;
+          font-size: 140%;
+        }
+        a-scene {
+          height: 100vh;
+          width: 100%;
+        }
+      </style>
+    </head>
+    <body>
+     
+    <section>
+    
+      <div class="container-fluid">
+        <div class="row">
+            <div class = "col-6">
+            <div id="blocklyDiv" style="height: 100vh; width: 56vw;"></div>
+            </div>
+            <div class="col-6" id="myEmbeddedScene" style="padding-left: 9rem;">
+    <a-scene id="Default-scene" light="defaultLightsEnabled: false" physics="debug: false;" embedded>
+      
+        <a-entity id="Light1" light="type: ambient; color: #BBB;"></a-entity>
+        <a-entity id="Light2" light="type: directional; color: #BBB; intensity: 0.4" position="-0.5 1 1"></a-entity>
+        <a-entity id="rig" movement-controls="enabled:false" position="0 2.2 4">
+          <a-entity id="Camera-entities" camera look-controls>
+                      <a-entity id="Camera-controls" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+                        animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                        animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+                        cursor="fuse: true;"
+                        material="color: cyan; shader: flat"
+                        position="0 0 -3"
+                        geometry="primitive: ring ; radiusInner: 0.10; radiusOuter: 0.15;"></a-entity>
+            </a-entity>
+          </a-entity>
+  
+      <a-sky id="Default-sky" position="0 0 1.50303" rotation="-0.3202834074781302 -2.4499675319794 -1.3584829322551817" color="gray"></a-sky>
+
+        </a-scene>
+    
+                  
+                
+          </div>
+        </div>
+      </div>
+    
+      
+    
+      <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+        <category name="Logic" categorystyle="logic_category">
+          <block type="controls_if"></block>
+          <block type="logic_compare"></block>
+          <block type="logic_operation"></block>
+          <block type="logic_negate"></block>
+          <block type="logic_boolean"></block>
+        </category>
+        <category name="Math" categorystyle="math_category">
+          <block type="math_number" gap="32">
+            <field name="NUM">123</field>
+          </block>
+          <block type="math_arithmetic">
+            <value name="A">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="B">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="math_random_int">
+            <value name="FROM">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="TO">
+              <shadow type="math_number">
+                <field name="NUM">100</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="math_random_float"></block>
+        </category>
+        <category name="Text" categorystyle="text_category">
+          <block type="text"></block>
+          <block type="set_text"></block>
+          <block type="update_text"></block>
+          <sep gap="32"></sep>
+          <label text="For Reticle"></label>
+          <block type="incrementtext"></block>
+          <block type="decrementtext"></block>
+          <sep gap="32"></sep>
+          <label text="For Physics collision"></label>
+          <block type="score"></block>
+        </category>
+        <category name="Variables" categorystyle="variable_category" custom="VARIABLE"></category>
+        <category name="Functions" categorystyle="procedure_category">
+          <block type="function"></block>
+        </category>
+        <category categorystyle="colour_category" name="Colour">
+          <block type="colour_picker"></block>
+          <block type="set_color"></block>
+        </category>
+        <category name="Actions" categorystyle="action_category">
+          <block type="key_pressed"></block>
+          <block type="mouse_events"></block>
+          <sep gap="32"></sep>
+          <label text="For Reticle"></label>
+          <block type="OnClick"></block>
+        </category>
+
+        <category name="Environments" categorystyle="environment_category">
+          <label text="With physics environment"></label>
+          <block type="physics_forest"></block>
+          <block type="physics_egypt"></block>
+          <block type="physics_city"></block>
+          <block type="physics_volcano"></block>
+        </category>
+
+
+        <category name="Background" categorystyle="background_category">
+          <block type="light"></block>
+        </category>
+        <category name="Animation" categorystyle="Animation">
+          <block type = "rotate_animation"></block>   
+          <block type = "position_animation"></block>
+          <block type = "scale_animation"></block>
+          <block type = "playon"></block>
+          <block type = "duration"></block>
+          <block type = "loop"></block>
+          <block type = "fromxyz"></block>
+          <block type = "toxyz"></block>
+        </category>
+
+        <category name="Add Objects" categorystyle="basic_category">
+          <block type="box"></block>
+          <block type="sphere"></block>
+          <block type="cylinder"></block>
+          <block type="cone"></block>
+          <block type="plane"></block>
+          <block type="tetrahedron"></block>
+          <block type="octahedron"></block>
+          <block type="circle"></block>
+          <block type = 'dodecahedron'></block>
+          <block type = 'ring'></block>
+          <block type = 'torus'></block>
+          <block type = 'torusknot'></block>
+          <block type = 'triangle'></block>
+          <block type="import"></block>
+        </category>
+
+        <category name="Operations" categorystyle="operations_category">
+          
+    
+          <block type="position"></block>
+          <block type="position_x"></block>
+          <block type="position_y"></block>
+          <block type="position_z"></block>
+          <block type="rotation"></block>
+          <block type="rotation_x"></block>
+          <block type="rotation_y"></block>
+          <block type="rotation_z"></block>
+          <block type="scaling"></block>
+          <block type="scaling_x"></block>
+          <block type="scaling_y"></block>
+          <block type="scaling_z"></block>
+          <block type="destroy_object"></block>
+          
+    
+          
+    
+         
+        </category>
+        <category name="Sensing" categorystyle="sensing_category">
+          <block type="get_position_x"></block>
+          <block type="get_position_y"></block>
+          <block type="get_position_z"></block>
+          <block type="get_rotation_x"></block>
+          <block type="get_rotation_y"></block>
+          <block type="get_rotation_z"></block>
+          <block type="get_scale_x"></block>
+          <block type="get_scale_y"></block>
+          <block type="get_scale_z"></block>
+          <block type="get_object"></block>
+          <block type="get_color"></block>
+        </category>
+        <category name="Delay" categorystyle="delay_category">
+          <block type="setinterval"></block>
+          <block type="setintervalloop"></block>
+          <block type="settimeout"></block>
+        </category>
+        
+        <category name="Controls" categorystyle="control_category">
+          <block type="movement"></block>
+          <block type="wasdmovement"></block>
+        </category>
+
+        <category name="Physics" categorystyle="physics_category">
+          <block type="static"></block>
+          <block type="dynamic"></block>
+          <block type="collision"></block>
+          <block type="worldphysics"></block>
+        </category>
+        
+        <category name="Characters" categorystyle="char_category">
+          <block type="character1"></block>
+          <block type="character2"></block>
+          <block type="character3"></block>
+          <block type="character4"></block>
+          <block type="character5"></block>
+        </category>
+
+        <category name="Examples" categorystyle="example_category">
+          <block type="cars"></block>
+          <block type="planes"></block>
+          <block type="shooter"></block>
+          <block type="bowling"></block>
+          <block type="trigger"></block>
+        </category>
+
+        <category name="IoT" categorystyle="iot_category">
+          <label text="For Thingspeak"></label>
+          <block type="iot_block"></block>
+          <block type="iot_block_upload"></block>
+          <block type="multiple_iot_block_upload"></block>
+          <block type="fieldnumberandvalue"></block>
+          <sep gap="32"></sep>
+          <label text="For Custom server"></label>
+          <block type="customserverget"></block>
+          <block type="customserverpost"></block>
+        </category>
+
+        <category name="Sound" categorystyle="sound_category">
+          <block type="sound1"></block>
+          <block type="volume"></block>
+          <block type="play"></block>
+          <block type="pause"></block>
+        </category>
+
+      </xml>
+    </section>
+      <script>
+        var demoWorkspace = Blockly.inject('blocklyDiv',
+            {media: 'media/',
+             toolbox: document.getElementById('toolbox'),
+             renderer: 'zelos',
+             grid:
+             {spacing: 20,
+              length: 3,
+              colour: '#ccc',
+              snap: true},
+              zoom:
+             {controls: true,
+              wheel: true,
+              startScale: 1.0,
+              maxScale: 3,
+              minScale: 0.3,
+              scaleSpeed: 1.2,
+              pinch: true},
+              move:{
+            scrollbars: true,
+            drag: true,
+            wheel: false},
+    
+            trashcan: true});
+    
+
+            function download(filename) 
+            {
+                var xml = Blockly.Xml.workspaceToDom(demoWorkspace);
+                var xml_text = Blockly.Xml.domToText(xml);
+                var pom = document.createElement('a');
+                pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xml_text));
+                pom.setAttribute('download', filename);
+                
+                if (document.createEvent) {
+                    var event = document.createEvent('MouseEvents');
+                    event.initEvent('click', true, true);
+                    pom.dispatchEvent(event);
+                }
+                else {
+                    pom.click();
+                }
+            }
+
+
+
+          function runcode() 
+          {
+            var code = Blockly.JavaScript.workspaceToCode(demoWorkspace);
+            Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+
+            try
+            {        
+              // eval(code);
+            } 
+            catch(e) 
+            {
+              // alert(e);
+            }
+
+            return code
+          }
+
+      
+          function savecode()
+          {
+            var xml = Blockly.Xml.workspaceToDom(demoWorkspace);
+            var xml_text = Blockly.Xml.domToText(xml);
+            return xml_text
+          }
+
+
+      </script>
+
+
+      <script type="text/javascript">
+        function updateDiv()
+        {
+        
+
+
+          fetch("blocks/blocks.xml")
+          .then( response => response.text() )
+          .then( text => Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(text), demoWorkspace)); 
+
+          // alert(text)
+
+      }
+        
+        
+        </script> 
+
+
+      <script type="text/javascript"> 
+        document.getElementById('inputfile') 
+            .addEventListener('change', function() { 
+              
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+              var xml = Blockly.Xml.textToDom(fr.result);
+              Blockly.Xml.domToWorkspace(xml, demoWorkspace);
+            } 
+              
+            fr.readAsText(this.files[0]); 
+        }) 
+    </script>  
+
+
+    <script>
+      function loadblock(text) {
+        var xml = Blockly.Xml.textToDom(text);
+        // alert(xml);
+        Blockly.Xml.domToWorkspace(xml, demoWorkspace);
+
+      }
+
+    </script>
+    <script>
+      function clearcode() {
+        demoWorkspace.clear();
+      }
+    </script>
+    <script src = "blkcode.dll"></script>
+    
+    
+
+    </body>
+    </html>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+

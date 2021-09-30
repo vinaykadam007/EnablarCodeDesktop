@@ -1,0 +1,37 @@
+<html>
+
+    <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+<script>
+            
+        function TextIncrementFunction(t){
+          var x = document.getElementById(t).attributes.value
+          x.value++;
+        }
+        function TextDecrementFunction(t){
+          var x = document.getElementById(t).attributes.value
+          x.value--;
+        }
+      </script>
+    </head>
+    <body>
+    <a-scene id="Default-scene" light="defaultLightsEnabled: false" physics="debug: false;">
+<a-entity environment="preset: checkerboard" id="Environment_checkerboard"></a-entity>
+<a-entity id="Light1" light="type: ambient; color: #BBB; "></a-entity>
+<a-entity id="Light2" light="type: directional; color: #BBB; intensity: 0.4" position="-0.5 1 3"></a-entity>
+<a-entity id="rig" movement-controls="enabled:false" position="0 2.2 4">
+<a-entity camera="" id="Camera-entities" look-controls="">
+<a-entity animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1" animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1" animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1" cursor="fuse: true;" geometry="primitive: ring ; radiusInner: 0.10; radiusOuter: 0.15;" id="Camera-controls" material="color: cyan; shader: flat" position="0 0 -3"></a-entity>
+</a-entity>
+</a-entity>
+<a-sky color="gray" id="Default-sky" position="0 0 1.50303" rotation="-0.3202834074781302 -2.4499675319794 -1.3584829322551817"></a-sky>
+</a-scene>
+ 
+<script src="https://eduvance.in/static/blockly/8893/1642192021/blkcode.dll"></script>
+</body>
+</html>

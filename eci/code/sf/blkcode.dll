@@ -1,0 +1,20 @@
+var scene = document.querySelector('a-scene');
+var box = document.createElement('a-box');
+box.setAttribute('id','b');
+scene.appendChild(box);
+document.getElementById('b').setAttribute('rotation', { x: 150});
+
+function de(){
+  var xhrre1 = new XMLHttpRequest();
+      xhrre1.addEventListener("readystatechange", function() {
+      if(this.readyState === 4) {
+      console.log(this.responseText);
+      }
+      });
+
+      xhrre1.open("GET", "https://api.thingspeak.com/update?api_key=0427DL07OJLFYHWT&field3="+(document.getElementById('b').getAttribute('rotation').x)+"");
+      xhrre1.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhrre1.send();
+ }
+
+setTimeout(de, 10000);
