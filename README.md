@@ -3,7 +3,9 @@
 
 ## Description:
 Welcome to the EnablAR Code project! This repository showcases my contributions to the development and maintenance of an exciting Augmented Reality (AR) educational tool. EnablAR Code is a windows-based desktop application that serves as a platform for learning the intricacies of Augmented Reality using JavaScript. Additionally, I've worked on revising and transforming it into a web-based version, which is accessible at https://code.enablar.co.
-!https://github.com/vinaykadam007/EnablarCodeDesktop/assets/39087585/c448d665-b957-4b64-badd-330897aa98ef
+
+## Demo:
+https://github.com/vinaykadam007/EnablarCodeDesktop/assets/39087585/c448d665-b957-4b64-badd-330897aa98ef
 
 
 Features
